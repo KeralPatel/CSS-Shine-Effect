@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>CSS Shine Effect Demo</title>
+<style>
+#logo {
+position: absolute;
+top: 0;
+left: 0;
+width: 250px;
+height: 100px;
+overflow: hidden;
+}
+#logo img {
+width: 100%;
+}
+#logo:before {
+content: '';
+position: absolute;
+top: 0;
+left: -100px;
+width: 70px;
+height: 100%;
+background: rgba(255,255,255, 0.3);
+transform: skewX(-30deg);
+animation-name: slide;
+animation-duration: 7s;
+animation-timing-function: ease-in-out;
+animation-delay: .3s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+background: linear-gradient(
+    to right, 
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+}
+@keyframes slide {
+  0% {
+    left: -100;
+    top: 0;
+  }
+  50% {
+    left: 120px;
+    top: 0px;
+  }
+  100% {
+    left: 290px;
+    top: 0;
+  }
+}
+</style>
+</head>
+<body>
+<div id="logo">
+  <a href="https://www.keralpatel.com/how-to-achieve-shine-effect-on-your-logo-image/" target="_blank"><img src="https://www.keralpatel.com/logo.png"></a>
+</div>
+</body>
+</html>
